@@ -26,7 +26,7 @@ export class EmployeeListComponent implements OnInit {
   ngOnInit() {
     this.findAllEmployees();
   }
-
+  //searching
   applyFilter(filterValue: string) {
     
     this.dataSource.filter = filterValue.trim().toLowerCase();

@@ -27,3 +27,9 @@ table {
 .custom-mat-cell{
   width: 120px;
 }
+.search-box{
+  border: 3px solid #00B4CC;
+  height: 27pt;
+  
+}
+

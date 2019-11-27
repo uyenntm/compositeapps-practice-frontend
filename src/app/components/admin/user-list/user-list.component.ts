@@ -13,7 +13,7 @@ declare var $: any;
 export class UserListComponent implements OnInit {
   userList: Array<User>;
   dataSource: MatTableDataSource<User> = new MatTableDataSource();
-  displayedColumns: string[] = ['id', 'name', 'username', 'action'];
+  displayedColumns: string[] = ['id', 'name', 'username','role', 'action'];
   selectedUser: User = new User();
   errorMessage: string;
   infoMessage: string;
@@ -25,6 +25,10 @@ export class UserListComponent implements OnInit {
 
   ngOnInit() {
     this.findAllUsers();
+  }
+  //searching
+  applyFilter(filterValue: string) {
+    this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
   ngAfterViewInit(){
