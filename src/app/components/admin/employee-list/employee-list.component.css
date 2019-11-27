@@ -1,0 +1,38 @@
+table {
+    width: 100%;
+  }
+  
+  /* .custom-container {
+    margin-left: 100px;
+    margin-top: 60px;
+    width: calc(100% - 100px);
+  } */
+  .custom-container {
+    padding-left: 5%;
+    margin-top: 60px;
+    /* width: calc(100% - 100px); */
+    width: 70%;
+  }
+  
+
+  
+  .custom-btn-link{
+    margin-left: 5px;
+    color: #fff;
+  }
+  
+  .custom-btn-link .glyphicon{
+    color: #fff;
+  }
+  
+  .custom-mat-cell{
+    width: 120px;
+  }
+  
+  .search-box{
+    border: 3px solid #00B4CC;
+    height: 27pt;
+    
+  }
+
+  

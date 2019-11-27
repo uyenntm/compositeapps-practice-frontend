@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "~bootstrap/dist/css/bootstrap.css";
+.custom-container {
+    padding-left: 5%;
+    margin-top: 60px;
+    /* width: calc(100% - 100px); */
+    width: 70%;
+  }
+  
+
