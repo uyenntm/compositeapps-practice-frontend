@@ -16,12 +16,14 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit() {
     this.numberOfUsers();
+    this.numberOfEmployees();
     // this.numberOfProducts();
     // this.numberOfTransactions();
   }
 
   numberOfUsers(){
     this.adminService.numberOfUsers().subscribe(data => {
+      //console.log("user count", data.response);
       this.userCount = data.response;
     });
   }
@@ -34,6 +36,7 @@ export class DashboardComponent implements OnInit {
 
   numberOfEmployees(){
     this.adminService.numberOfEmployees().subscribe(data => {
+      //console.log("employee count", data.response);
       this.employeeCount = data.response;
     });
   }
