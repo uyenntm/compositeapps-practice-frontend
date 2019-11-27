@@ -8,10 +8,8 @@ table {
     width: calc(100% - 100px);
   } */
   .custom-container {
-    padding-left: 5%;
-    margin-top: 60px;
-    /* width: calc(100% - 100px); */
-    width: 70%;
+    margin-left:15%;
+    width: 85%;
   }
   
 
@@ -33,6 +31,16 @@ table {
     border: 3px solid #00B4CC;
     height: 27pt;
     
+  }
+
+  .help-block, .alert-danger{
+    background-color: red;
+    color: white;
+    padding-left: 3px;
+    font-weight: bold;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
   }
 
   
