@@ -13,7 +13,7 @@
   </div>
 
   <div *ngIf="dataSource">
-    <div class="card">
+    <div class="table-responsive">
       <div class="card-header">
         <div class="row">
           <div class="col col-xs-6">
@@ -24,31 +24,31 @@
       <div class="container search-box ">
           <input  (keyup)="applyFilter($event.target.value)" matInput placeholder="Search...">
        </div>
-      <div class="card-body">
-        <table mat-table [dataSource]="dataSource" matSort>
+      <div class="">
+        <table class="table  table-hover" mat-table [dataSource]="dataSource" matSort>
           <ng-container matColumnDef="id">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header>User Id</th>
-            <td mat-cell *matCellDef="let element">{{element.id}}</td>
+            <th scope="col" mat-header-cell *matHeaderCellDef mat-sort-header>User Id</th>
+            <td class="" mat-cell *matCellDef="let element">{{element.id}}</td>
           </ng-container>
 
           <ng-container matColumnDef="name">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header>Full Name</th>
+            <th scope="col" mat-header-cell *matHeaderCellDef mat-sort-header>Full Name</th>
             <td mat-cell *matCellDef="let element">{{element.name}}</td>
           </ng-container>
 
           <ng-container matColumnDef="username">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header>Username</th>
+            <th scope="col" mat-header-cell *matHeaderCellDef mat-sort-header>Username</th>
             <td mat-cell *matCellDef="let element">{{element.username}}</td>
           </ng-container>
 
           <ng-container matColumnDef="role">
-              <th mat-header-cell *matHeaderCellDef mat-sort-header>Role</th>
+              <th scope="col" mat-header-cell *matHeaderCellDef mat-sort-header>Role</th>
               <td mat-cell *matCellDef="let element">{{element.role}}</td>
             </ng-container>
 
           <ng-container matColumnDef="action">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header>Actions</th>
-            <td mat-cell *matCellDef="let element" style="width:140px;">
+            <th scope="col" mat-header-cell *matHeaderCellDef mat-sort-header>Actions</th>
+            <td mat-cell *matCellDef="let element">
               <a class="btn btn-warning custom-btn-link" (click)="editUserRequest(element)"><em class="glyphicon glyphicon-pencil"></em></a>
               <a class="btn btn-danger custom-btn-link" (click)="deleteUserRequest(element)"><em class="glyphicon glyphicon-trash"></em></a>
             </td>

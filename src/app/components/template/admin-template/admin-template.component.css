@@ -50,3 +50,7 @@ padding: 0;
       flex-direction: row;
   }
 }
+.header-nav{
+  margin-bottom:5%;
+  margin-left:10%;
+}
