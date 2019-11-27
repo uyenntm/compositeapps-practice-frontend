@@ -3,9 +3,9 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {map} from 'rxjs/operators';
 import {User} from '../model/user';
-import {Product} from '../model/product';
+// import {Product} from '../model/product';
 import {Employee} from '../model/employee';
-import {Transaction} from '../model/transaction';
+// import {Transaction} from '../model/transaction';
 
 let API_URL = "http://localhost:8080/api/admin/";
 
@@ -45,30 +45,30 @@ export class AdminService {
   }
 
   //products
-  createProduct(product: Product): Observable<any> {
-    return this.http.post(API_URL + "product-create", JSON.stringify(product),
-  {headers: this.headers});
-  }
+  // createProduct(product: Product): Observable<any> {
+  //   return this.http.post(API_URL + "product-create", JSON.stringify(product),
+  // {headers: this.headers});
+  // }
 
-  updateProduct(product: Product): Observable<any> {
-    return this.http.put(API_URL + "product-update", JSON.stringify(product),
-  {headers: this.headers});
-  }
+  // updateProduct(product: Product): Observable<any> {
+  //   return this.http.put(API_URL + "product-update", JSON.stringify(product),
+  // {headers: this.headers});
+  // }
 
-  deleteProduct(product: Product): Observable<any> {
-    return this.http.post(API_URL + "product-delete", JSON.stringify(product),
-  {headers: this.headers});
-  }
+  // deleteProduct(product: Product): Observable<any> {
+  //   return this.http.post(API_URL + "product-delete", JSON.stringify(product),
+  // {headers: this.headers});
+  // }
 
-  findAllProducts(): Observable<any> {
-    return this.http.get(API_URL + "product-all",
-  {headers: this.headers});
-  }
+  // findAllProducts(): Observable<any> {
+  //   return this.http.get(API_URL + "product-all",
+  // {headers: this.headers});
+  // }
 
-  numberOfProducts(): Observable<any> {
-    return this.http.get(API_URL + "product-number",
-  {headers: this.headers});
-  }
+  // numberOfProducts(): Observable<any> {
+  //   return this.http.get(API_URL + "product-number",
+  // {headers: this.headers});
+  // }
 
   //employees
   createEmployee(employee: Employee): Observable<any> {
@@ -96,14 +96,14 @@ export class AdminService {
   {headers: this.headers});
   }
 
-  //transactions
-  findAllTransactions(): Observable<any> {
-    return this.http.get(API_URL + "transaction-all",
-   {headers: this.headers});
-  }
+  // //transactions
+  // findAllTransactions(): Observable<any> {
+  //   return this.http.get(API_URL + "transaction-all",
+  //  {headers: this.headers});
+  // }
 
-  numberOfTransactions(): Observable<any> {
-    return this.http.get(API_URL + "transaction-number",
-  {headers: this.headers});
-  }
+  // numberOfTransactions(): Observable<any> {
+  //   return this.http.get(API_URL + "transaction-number",
+  // {headers: this.headers});
+  // }
 }

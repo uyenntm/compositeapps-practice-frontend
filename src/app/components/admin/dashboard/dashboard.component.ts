@@ -8,16 +8,16 @@ import {AdminService} from '../../../services/admin.service';
 })
 export class DashboardComponent implements OnInit {
   userCount:any = "";
-  productCount:any = "";
+  // productCount:any = "";
   employeeCount:any = "";
-  transactionCount:any = "";
+  // transactionCount:any = "";
 
   constructor(private adminService: AdminService) { }
 
   ngOnInit() {
     this.numberOfUsers();
-    this.numberOfProducts();
-    this.numberOfTransactions();
+    // this.numberOfProducts();
+    // this.numberOfTransactions();
   }
 
   numberOfUsers(){
@@ -26,11 +26,11 @@ export class DashboardComponent implements OnInit {
     });
   }
 
-  numberOfProducts(){
-    this.adminService.numberOfProducts().subscribe(data => {
-      this.productCount = data.response;
-    });
-  }
+  // numberOfProducts(){
+  //   this.adminService.numberOfProducts().subscribe(data => {
+  //     this.productCount = data.response;
+  //   });
+  // }
 
   numberOfEmployees(){
     this.adminService.numberOfEmployees().subscribe(data => {
@@ -38,10 +38,10 @@ export class DashboardComponent implements OnInit {
     });
   }
 
-  numberOfTransactions(){
-    this.adminService.numberOfTransactions().subscribe(data => {
-      this.transactionCount = data.response;
-    })
-  }
+  // numberOfTransactions(){
+  //   this.adminService.numberOfTransactions().subscribe(data => {
+  //     this.transactionCount = data.response;
+  //   })
+  // }
 
 }

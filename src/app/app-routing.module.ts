@@ -7,10 +7,10 @@ import {ProfileComponent} from './components/user/profile/profile.component';
 import {DetailComponent} from './components/user/detail/detail.component';
 import {DashboardComponent} from './components/admin/dashboard/dashboard.component';
 import {UserListComponent} from './components/admin/user-list/user-list.component';
-import {ProductListComponent} from './components/admin/product-list/product-list.component';
+// import {ProductListComponent} from './components/admin/product-list/product-list.component';
 import {UnathorizedComponent} from './components/error/unathorized/unathorized.component';
 import {NotFoundComponent} from './components/error/not-found/not-found.component';
-import {TransactionListComponent} from './components/admin/transaction-list/transaction-list.component';
+// import {TransactionListComponent} from './components/admin/transaction-list/transaction-list.component';
 import {AuthGuard} from './guards/auth.guard';
 import {Role} from './model/role';
 import { EmployeeListComponent } from './components/admin/employee-list/employee-list.component';
@@ -40,22 +40,22 @@ const routes: Routes = [
   canActivate: [AuthGuard],
   data: {roles: [Role.ADMIN]}
   },
-  {path: 'product-list',
-  component: ProductListComponent,
-  canActivate: [AuthGuard],
-  data: {roles: [Role.ADMIN]}
- },
+//   {path: 'product-list',
+//   component: ProductListComponent,
+//   canActivate: [AuthGuard],
+//   data: {roles: [Role.ADMIN]}
+//  },
  //employee-list
  {path: 'employee-list',
   component: EmployeeListComponent,
   canActivate: [AuthGuard],
   data: {roles: [Role.ADMIN]}
  },
- {path: 'transaction-list',
- component: TransactionListComponent,
- canActivate: [AuthGuard],
- data: {roles: [Role.ADMIN]}
-},
+//  {path: 'transaction-list',
+//  component: TransactionListComponent,
+//  canActivate: [AuthGuard],
+//  data: {roles: [Role.ADMIN]}
+// },
 
   //error pages
   {path: '404', component: NotFoundComponent},
