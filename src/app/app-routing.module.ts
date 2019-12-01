@@ -4,20 +4,17 @@ import { Router, Routes, RouterModule } from '@angular/router';
 import {LoginComponent} from './components/user/login/login.component';
 import {RegisterComponent} from './components/user/register/register.component';
 import {ProfileComponent} from './components/user/profile/profile.component';
-import {DetailComponent} from './components/user/detail/detail.component';
 import {DashboardComponent} from './components/admin/dashboard/dashboard.component';
 import {UserListComponent} from './components/admin/user-list/user-list.component';
-// import {ProductListComponent} from './components/admin/product-list/product-list.component';
 import {UnathorizedComponent} from './components/error/unathorized/unathorized.component';
 import {NotFoundComponent} from './components/error/not-found/not-found.component';
-// import {TransactionListComponent} from './components/admin/transaction-list/transaction-list.component';
 import {AuthGuard} from './guards/auth.guard';
 import {Role} from './model/role';
 import { EmployeeListComponent } from './components/admin/employee-list/employee-list.component';
 
 const routes: Routes = [
   //Main page
-  {path: '', redirectTo: 'home', pathMatch: 'full'},
+  {path: '', redirectTo: 'login', pathMatch: 'full'},
  
   //User pages
   {path: 'login', component: LoginComponent},
@@ -26,8 +23,6 @@ const routes: Routes = [
   component: ProfileComponent,
   canActivate: [AuthGuard]
   },
-  {path: 'detail', component: DetailComponent},
-  {path: 'detail/:id', component: DetailComponent},
 
   //admin panel
   {path: 'dashboard',

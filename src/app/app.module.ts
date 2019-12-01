@@ -7,7 +7,6 @@ import { LoginComponent } from './components/user/login/login.component';
 import { RegisterComponent } from './components/user/register/register.component';
 import { ProfileComponent } from './components/user/profile/profile.component';
 
-import { DetailComponent } from './components/user/detail/detail.component';
 import { DashboardComponent } from './components/admin/dashboard/dashboard.component';
 import { UserListComponent } from './components/admin/user-list/user-list.component';
 
@@ -39,16 +38,12 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     LoginComponent,
     RegisterComponent,
     ProfileComponent,
-   
-    DetailComponent,
     DashboardComponent,
     UserListComponent,
-    
     UserTemplateComponent,
     AdminTemplateComponent,
     NotFoundComponent,
     UnathorizedComponent,
-    // TransactionListComponent,
     EmployeeListComponent
   ],
   imports: [
